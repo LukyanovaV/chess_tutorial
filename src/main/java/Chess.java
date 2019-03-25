@@ -8,7 +8,7 @@ public class Chess {
 
 
     /**
-     * Инициализация шахматной доски, где у каждой клетки свой уникальный номер от 1 до 64
+     * Initialization of the chessboard, where each cell has unique number from 1 to 64
      */
     public Chess(){
         DESK = new Integer[8][8];
@@ -26,10 +26,10 @@ public class Chess {
     }
 
     /**
-     * Установка позиции фигурки на шахматной доске
-     * @param x Координата горизонтального ряда клеток шахматной доски(от 0 до 7)
-     * @param y Координата вертикального ряда клеток шахматной доски(от 0 до 7)
-     * @return Номер клетки на шахматной доске
+     * Setting figure on the chessboard
+     * @param x The coordinate of the horizontal row of cells(from 0 to 7)
+     * @param y The coordinate of the vertical row of cells(from 0 to 7)
+     * @return Cell number
      */
     public Integer setFigurePosition(Integer x, Integer y){
         if(x<0||x>7||y<0||y>7){
@@ -44,9 +44,9 @@ public class Chess {
     }
 
     /**
-     * Получение позиции фигурки на шахматной доске
-     * @param figure Фигурка на шахматной доске
-     * @return Номер клетки на которой находится фигурка
+     * Getting figure position on the chessboard
+     * @param figure figure on the chessboard
+     * @return Number of Figure's cell
      */
     public static Integer[] getFigurePosition(ArrayList<Integer> figure){
         Integer[] position = new Integer[2];
