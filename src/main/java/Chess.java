@@ -1,15 +1,16 @@
 import java.util.ArrayList;
 
-public class Chest {
+public class Chess {
 
     public static Integer[][] DESK;
+
     public Integer count = 1;
 
 
     /**
      * Инициализация шахматной доски, где у каждой клетки свой уникальный номер от 1 до 64
      */
-    public Chest(){
+    public Chess(){
         DESK = new Integer[8][8];
 
         for(int i= 0;i<8;i++){
@@ -20,6 +21,7 @@ public class Chest {
             }
             System.out.println();
         }
+
 
     }
 
@@ -69,5 +71,7 @@ public class Chest {
 
         return position;
     }
+
+
 
 }
