@@ -1,9 +1,18 @@
+/**
+ * Game
+ * Class of main method, which provide algorithm of knight movement
+ * Version info 1.0
+ * <p>
+ * Copyright notice
+ */
+
 import java.util.ArrayList;
 
 public class Game {
 
     public static Integer[][] DESK;
     public static ArrayList<Integer> knight;
+    public static ArrayList<Integer> knightHistory;
 
 
     public static void main(String[] args) {
@@ -23,13 +32,14 @@ public class Game {
         }
         knightFigure.showWay();
 
-        //Задание №2 : Write a new version of app, using the accessibility heuristic.
+        //Task №2 : Write a new version of app, using the accessibility heuristic.
         // Knight should always move to the square with the lowest "accessibility number"
         // 2.1 Make accessibility-matrix
         Integer[][] knightAccessibilityPoints;
         knightAccessibilityPoints = knightFigure.getKnightAccessibilityPoints();
+        knightHistory = new ArrayList<Integer>();
 
-        //Её вывод
+        //Output
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 System.out.print(" " + knightAccessibilityPoints[i][j]);
@@ -37,6 +47,11 @@ public class Game {
 
             System.out.println();
         }
+        System.out.println();
+
+        knightFigure.moveToLowAccessibilityNumberFrom(0, 0);
+        knightFigure.moveToLowAccessibilityNumberFrom(1, 1);
+        knightFigure.moveToLowAccessibilityNumberFrom(0, 1);
 
 
     }
