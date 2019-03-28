@@ -2,7 +2,7 @@
  * Game
  * Class of main method, which provide algorithm of knight movement
  * Version info 1.0
- * <p>
+ *
  * Copyright notice
  */
 
@@ -44,14 +44,14 @@ public class Game {
             for (int j = 0; j < 8; j++) {
                 System.out.print(" " + knightAccessibilityPoints[i][j]);
             }
-
             System.out.println();
         }
         System.out.println();
 
+        //Move to the square with the lowest accessibility number
         knightFigure.moveToLowAccessibilityNumberFrom(0, 0);
         knightFigure.moveToLowAccessibilityNumberFrom(1, 1);
-        knightFigure.moveToLowAccessibilityNumberFrom(0, 1);
+        knightFigure.moveToLowAccessibilityNumberFrom(3, 2);
 
 
     }

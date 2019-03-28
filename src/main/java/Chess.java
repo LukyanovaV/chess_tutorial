@@ -26,12 +26,8 @@ public class Chess {
             for (int j = 0; j < 8; j++) {
                 DESK[i][j] = count;
                 count++;
-                System.out.print(" " + DESK[i][j]);
             }
-            System.out.println();
         }
-
-
     }
 
     /**
